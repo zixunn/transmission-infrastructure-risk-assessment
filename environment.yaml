@@ -1,0 +1,39 @@
+name: transmission-risk
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyter
+  - jupyterlab
+  - xarray
+  - rioxarray
+  - geopandas
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - plotly
+  - folium
+  - contextily
+  - rasterio
+  - fiona
+  - shapely
+  - pyproj
+  - cartopy
+  - hvplot
+  - panel
+  - holoviews
+  - datashader
+  - pip
+  - pip:
+    - asf_search
+    - earthaccess
+    - pystac
+    - pystac-client
+    - rio-cogeo
+    - titiler
+    - maplibre
+    - leafmap
