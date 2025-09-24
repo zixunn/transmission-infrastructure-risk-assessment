@@ -1,0 +1,41 @@
+# Project Configuration
+project:
+  name: "Transmission Infrastructure Risk Assessment"
+  version: "1.0.0"
+  authors: ["Your Name", "Team Members"]
+  
+# Study Area Configuration
+study_area:
+  regions: ["Houston", "New Orleans", "Tampa Bay", "Mobile", "Corpus Christi"]
+  bbox:
+    houston: [-95.8, 29.5, -94.8, 30.1]
+    new_orleans: [-90.3, 29.8, -89.9, 30.1]
+    
+# Data Sources
+data_sources:
+  opera:
+    base_url: "https://grfn.asf.alaska.edu/"
+    product_type: "OPERA_L3_DISP-ALERT"
+  
+  optical:
+    sentinel2:
+      collection: "sentinel-2-l2a"
+      cloud_cover_max: 20
+    
+# Processing Parameters
+processing:
+  displacement:
+    los_to_vertical: true
+    uncertainty_threshold: 0.02
+    temporal_smoothing: true
+    
+  vegetation:
+    indices: ["NDVI", "MNDVI", "NDMI", "SMI"]
+    temporal_window: 30  # days
+    
+# Output Configuration
+outputs:
+  format: "COG"  # Cloud-Optimized GeoTIFF
+  compression: "lzw"
+  tiling: true
+  overviews: true
