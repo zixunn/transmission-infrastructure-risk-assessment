@@ -20,8 +20,4 @@ This project develops a comprehensive geospatial analysis framework to assess tr
 - Git
 - NASA Earthdata account
 
-### Installation
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/transmission-infrastructure-risk-assessment.git
-cd transmission-infrastructure-risk-assessment
+
